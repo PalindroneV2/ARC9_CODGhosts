@@ -76,6 +76,142 @@ sound.Add( {
     }
 } )
 
+-- AK12
+
+sound.Add( {
+    name = "ARC9_Ghosts.AK12_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_AK12/stereo.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.AK12_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_AK12/mech.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.AK12_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_AK12/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.AK12_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_AK12/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.AK12_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_AK12/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.AK12_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_AK12/lift.wav",
+    }
+} )
+
+-- ARX160
+
+sound.Add( {
+    name = "ARC9_Ghosts.ARX160_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_arx160/stereo.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.ARX160_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_arx160/mech.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.ARX160_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_arx160/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.ARX160_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_arx160/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.ARX160_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_arx160/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.ARX160_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_arx160/first_lift.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.ARX160_End",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_arx160/end.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.ARX160_Stock",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_arx160/stock.wav",
+    }
+} )
+
 -- M27
 
 sound.Add( {
