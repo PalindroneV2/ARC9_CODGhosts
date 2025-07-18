@@ -357,7 +357,7 @@ sound.Add( {
     }
 } )
 
--- R5 RGP
+-- K7
 
 sound.Add( {
     name = "ARC9_Ghosts.K7_Fire",
@@ -422,6 +422,74 @@ sound.Add( {
     level = 100,
     sound = {
         "^weapons/ARC9/gst_k7/end.wav",
+    }
+} )
+
+-- Bizon
+
+sound.Add( {
+    name = "ARC9_Ghosts.Bizon_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Bizon/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.Bizon_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Bizon/mech.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.Bizon_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Bizon/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.Bizon_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Bizon/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.Bizon_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Bizon/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.Bizon_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Bizon/lift.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.Bizon_End",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Bizon/end.wav",
     }
 } )
 
