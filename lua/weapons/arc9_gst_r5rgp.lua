@@ -158,7 +158,7 @@ SWEP.NoShellEjectUBGL = true
 SWEP.MuzzleEffectQCAUBGL = 1
 
 --SWEP.MuzzleEffect = "muzzleflash_suppressed"
-SWEP.MuzzleParticle = "muzzleflash_suppressed" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_1" -- Used for some muzzle effects.
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"
 SWEP.ShellPitch = 90

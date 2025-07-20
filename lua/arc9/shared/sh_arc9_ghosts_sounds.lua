@@ -289,6 +289,92 @@ sound.Add( {
     }
 } )
 
+-- Ameli
+
+sound.Add( {
+    name = "ARC9_Ghosts.Ameli_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Ameli/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.Ameli_Mech",
+    channel = CHAN_AUTO,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Ameli/mech.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.Ameli_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Ameli/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.Ameli_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Ameli/chamber_open.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.Ameli_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Ameli/chamber_close.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.Ameli_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Ameli/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.Ameli_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Ameli/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.Ameli_End",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Ameli/end.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.Ameli_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_Ameli/lift.wav",
+    }
+} )
+
 -- R5 RGP
 
 sound.Add( {
