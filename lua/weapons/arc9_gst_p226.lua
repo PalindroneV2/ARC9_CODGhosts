@@ -33,6 +33,8 @@ SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-9.75, 3.5, -4),
     Ang        =    Angle(-6, 0, 180),
+    TPIKPos        =    Vector(-10, 3, -8),
+    TPIKAng        =    Angle(0, 0, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.1,
 }
@@ -187,10 +189,11 @@ SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
 }
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "revolver"
-SWEP.HoldTypeSights = "revolver"
+SWEP.HoldType = "pistol"
+SWEP.HoldTypeSights = "pistol"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 
 SWEP.ActivePos = Vector(0, 0, -1)
