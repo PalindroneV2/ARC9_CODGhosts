@@ -39,7 +39,7 @@ ATT.EnterUBGLSound = "ARC9_Ghosts.FN40GL_Lift"
 ATT.ExitUBGLSound = "ARC9_Ghosts.FN40GL_Lift"
 
 ATT.ShootEntUBGL = "arc9_mwc_m203_he"
-ATT.ShootEntForceUBGL = 15000
+ATT.ShootEntForceUBGL = 4000
 
 ATT.MuzzleParticleUBGL = "muzzleflash_m79"
 

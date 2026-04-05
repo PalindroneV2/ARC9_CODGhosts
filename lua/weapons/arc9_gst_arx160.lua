@@ -285,7 +285,7 @@ SWEP.IronSightsHook = function(self)
         newang = Angle(0.0125, 0-0.05, 0)
     end
 
-    return {Pos = newpos, Ang = newang, Magnification = 1.1, ViewModelFOV = 60, CrosshairInSights = false,}
+    return {Pos = newpos, Ang = newang, Magnification = 1.1, ViewModelFOV = 50, CrosshairInSights = false,}
 end
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
