@@ -1,0 +1,1 @@
+list.Set("ContentCategoryIcons", "ARC9 - COD: Ghosts", "entities/gst_generic.png")

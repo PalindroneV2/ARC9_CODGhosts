@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+    "$basetexture"          "models/weapons/arc9/gst/gst_sights/targetfinder/targetfinder_screen"
+    "$translucent"          "1"
+    // "$vertexcolor"          "1"
+    // "$vertexalpha"          "1"
+}
