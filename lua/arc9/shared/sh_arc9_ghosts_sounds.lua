@@ -741,6 +741,78 @@ sound.Add( {
 -- MAUL
 
 sound.Add( {
+    name = "ARC9_Ghosts.FP6_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_shotgun_shared/slst_10f2.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.Shotgun_Silenced",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_shotgun_shared/silenced.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.FP6_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_shotgun_shared/mech_10f.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.FP6_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_fp6/lift.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.FP6_Chamber",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_fp6/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.FP6_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_fp6/in1.wav",
+        "^weapons/ARC9/gst_fp6/in2.wav",
+        "^weapons/ARC9/gst_fp6/in3.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.FP6_End",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_fp6/end.wav",
+    }
+} )
+
+-- MAUL
+
+sound.Add( {
     name = "ARC9_Ghosts.MAUL_Fire",
     channel = CHAN_STATIC,
     volume = 0.75,

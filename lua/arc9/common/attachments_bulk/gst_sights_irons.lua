@@ -121,8 +121,8 @@ ARC9.LoadAttachment(ATT, "gst_optic_acog")
 
 ATT = {}
 
-ATT.PrintName = "Elysium Targetfinder Sight"
-ATT.CompactName = [[ELYSIUM GST]]
+ATT.PrintName = "CNPCX DIGITAL III "
+ATT.CompactName = [[CNPCX]]
 ATT.Icon = Material("entities/gst_generic.png", "mips smooth")
 ATT.Description = [[COD Ghosts Electronic Sight.
 Provides an electronic crosshair for the user as well as highlighting targets in red.]]
@@ -141,12 +141,12 @@ ATT.Category = {"cod_optic", "cod_optic_alt", "cod_optic_rds"}
 
 ATT.Model = "models/weapons/arc9/gst_atts/gst_sight_targetfinder.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(-0.75, 0, -0.35)
 ATT.ModelBodygroups = "010"
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.005, 5, -1.78),
+        Pos = Vector(-0.005, 5, -1.823),
         Ang = Angle(0, 0, 0),
         ViewModelFOV = 50,
         Magnification = 1.25,
@@ -154,43 +154,109 @@ ATT.Sights = {
     },
 }
 
-ATT.RTScope = false
--- ATT.RTScopeSubmatIndex = 1
--- ATT.RTScopeFOV = 11
--- ATT.RTScopeRes = 1024
--- ATT.RTScopeReticle = Material("hud/arc9_bo1/reticles/bo2_mms.png", "mips smooth")
--- ATT.RTScopeReticleScale = 1.25
--- ATT.RTScopeShadowIntensity = 1.5
--- ATT.RTScopeNoPP = false
--- ATT.RTScopeNoShadow = true
+ATT.RTScope = true
+ATT.RTScopeSubmatIndex = 1
+ATT.RTScopeFOV = 30
+ATT.RTScopeRes = 1024
+ATT.RTScopeReticle = Material("", "mips smooth")
+ATT.RTScopeReticleScale = 1.25
+ATT.RTScopeShadowIntensity = 1.5
+ATT.RTScopeNoPP = false
+ATT.RTScopeNoShadow = true
 
--- ATT.RTScopeFLIR = true
--- ATT.RTScopeFLIRSolid = false
--- ATT.RTScopeFLIRHighlightColor = Color(255, 10, 10)
--- ATT.RTScopeFLIRMonochrome = false
--- ATT.RTScopeFLIRNoPP = false
--- ATT.RTScopeFLIRBlend = 0.1
--- ATT.RTScopeFLIRCCHot = { -- Color correction drawn only on FLIR targets
---     ["$pp_colour_addr"] = 0,
---     ["$pp_colour_addg"] = -230,
---     ["$pp_colour_addb"] = -230,
---     ["$pp_colour_brightness"] = 0,
---     ["$pp_colour_contrast"] = 1,
---     ["$pp_colour_colour"] = 1,
---     ["$pp_colour_mulr"] = 0,
---     ["$pp_colour_mulg"] = 0,
---     ["$pp_colour_mulb"] = 0
--- }
--- ATT.RTScopeFLIRCCCold = { -- Color correction drawn only on FLIR targets
---     ["$pp_colour_addr"] = 0,
---     ["$pp_colour_addg"] = 0,
---     ["$pp_colour_addb"] = 0,
---     ["$pp_colour_brightness"] = 0,
---     ["$pp_colour_contrast"] = 1,
---     ["$pp_colour_colour"] = 1,
---     ["$pp_colour_mulr"] = 0,
---     ["$pp_colour_mulg"] = 0,
---     ["$pp_colour_mulb"] = 0
--- }
+ATT.RTScopeFLIR = true
+ATT.RTScopeFLIRSolid = false
+ATT.RTScopeFLIRHighlightColor = Color(255, 10, 10)
+ATT.RTScopeFLIRMonochrome = false
+ATT.RTScopeFLIRNoPP = false
+ATT.RTScopeFLIRBlend = 0.1
+ATT.RTScopeFLIRCCHot = { -- Color correction drawn only on FLIR targets
+    ["$pp_colour_addr"] = 0,
+    ["$pp_colour_addg"] = -230,
+    ["$pp_colour_addb"] = -230,
+    ["$pp_colour_brightness"] = 0,
+    ["$pp_colour_contrast"] = 1,
+    ["$pp_colour_colour"] = 1,
+    ["$pp_colour_mulr"] = 0,
+    ["$pp_colour_mulg"] = 0,
+    ["$pp_colour_mulb"] = 0
+}
+ATT.RTScopeFLIRCCCold = { -- Color correction drawn only on FLIR targets
+    ["$pp_colour_addr"] = 0,
+    ["$pp_colour_addg"] = 0,
+    ["$pp_colour_addb"] = 0,
+    ["$pp_colour_brightness"] = 0,
+    ["$pp_colour_contrast"] = 1,
+    ["$pp_colour_colour"] = 1,
+    ["$pp_colour_mulr"] = 0,
+    ["$pp_colour_mulg"] = 0,
+    ["$pp_colour_mulb"] = 0
+}
 
 ARC9.LoadAttachment(ATT, "gst_optic_targetfinder")
+
+ATT = {}
+
+ATT.PrintName = "CNPCX DIGITAL III Back Up Iron Sight"
+ATT.CompactName = [[CNPCX BUS]]
+ATT.Icon = Material("entities/gst_generic.png", "mips smooth")
+ATT.Description = [[COD Ghosts Electronic Sight.
+Provides an electronic crosshair for the user as well as highlighting targets in red.]]
+ATT.CustomPros = {
+    ["Zoom Level"] = "2x",
+    ["Clearer sight picture"] = "",
+    ["Threat Identification"] = "True"
+}
+ATT.CustomCons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC9 - Ghosts Attachments"
+ATT.Free = false
+ATT.Folder = "R IRONS"
+
+ATT.Category = {"cod_extrairons_rear"}
+ATT.ActivateElements = {"extrairon","extrarear"}
+
+ATT.Model = "models/weapons/arc9/gst_atts/gst_sight_targetfinder.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0.5, 0, -0.35)
+ATT.ModelBodygroups = "001"
+
+ATT.Sights = {
+    {
+        Pos = Vector(0, 5, -1.8),
+        Ang = Angle(0, 0, 0),
+        ViewModelFOV = 50,
+        Magnification = 1.25,
+        IgnoreExtra = false,
+    },
+}
+
+ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_gst_targetfinder")
+
+ATT = {}
+
+ATT.PrintName = "CNPCX DIGITAL III Back Up Iron Sight"
+ATT.CompactName = [[CNPCX BUS]]
+ATT.Icon = Material("entities/gst_generic.png", "mips smooth")
+ATT.Description = [[COD Ghosts Electronic Sight.
+Provides an electronic crosshair for the user as well as highlighting targets in red.]]
+ATT.CustomPros = {
+    ["Zoom Level"] = "2x",
+    ["Clearer sight picture"] = "",
+    ["Threat Identification"] = "True"
+}
+ATT.CustomCons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC9 - Ghosts Attachments"
+ATT.Free = false
+ATT.Folder = "F IRONS"
+
+ATT.Category = {"cod_extrairons_front"}
+ATT.ActivateElements = {"extrairon","extrafront"}
+
+ATT.Model = "models/weapons/arc9/gst_atts/gst_sight_targetfinder_front.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, -0.35)
+ATT.ModelBodygroups = "001"
+
+ARC9.LoadAttachment(ATT, "cod_extra_iron_front_gst_targetfinder")

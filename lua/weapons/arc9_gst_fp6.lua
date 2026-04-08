@@ -157,8 +157,8 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_Ghosts.MAUL_Fire"
-SWEP.ShootSoundSilenced = "ARC9_MW3E.Striker_Sil"
+SWEP.ShootSound = "ARC9_Ghosts.FP6_Fire"
+SWEP.ShootSoundSilenced = "ARC9_Ghosts.Shotgun_Silenced"
 
 --SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.MuzzleParticle = "muzzleflash_shotgun" -- Used for some muzzle effects.
@@ -183,9 +183,9 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.0675, -3, 1.7),
-    Ang = Angle(0, .15, 0),
-    ViewModelFOV = 60,
+    Pos = Vector(-4, -2, 0.75),
+    Ang = Angle(0, 0, 0),
+    ViewModelFOV = 50,
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -203,7 +203,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
 
 SWEP.ActivePos = Vector(0, 0, -1)
-SWEP.ActiveAng = Angle(0, 0, -5)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 local movingoffset = Vector(0, -0.25, -0.25)
 SWEP.MovingPos = movingoffset
@@ -226,6 +226,7 @@ SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(15, 30, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(0,15,0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -236,6 +237,9 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {1,1}
         },
+    },
+    ["bo1_pap"] = {
+        ClipSize = 6,
     },
 }
 
@@ -300,8 +304,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Bone = "j_gun",
-        Pos = Vector(8.5, 0, -0.5),
+        Bone = "pump_jnt",
+        Pos = Vector(0, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"cod_rail_underbarrel"},
     },
@@ -309,7 +313,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(13, 0, -2),
+        Pos = Vector(5, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_shot_slug", "bo1_pap"},
     },
@@ -342,34 +346,117 @@ SWEP.Attachments = {
     },
 }
 
--- SWEP.Hook_TranslateAnimation = function (self, anim)
---     local attached = self:GetElements()
--- end
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+    local toob = self:Clip1()
+
+    if toob == 4 and anim == "reload" then
+        return "reload_1"
+    end
+    if toob == 3 and anim == "reload" then
+        return "reload_2"
+    end
+    if toob == 2 and anim == "reload" then
+        return "reload_3"
+    end
+    if toob == 1 and anim == "reload" then
+        return "reload_4"
+    end
+    if attached["bo1_pap"] and anim == "reload" or anim == "reload_empty" then
+        return "reload_2"
+    end
+end
 
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 35,
+        Time = 1 / 30,
     },
     ["draw"] = {
         Source = "draw",
         Time = 1,
         EventTable = {
-            {s = "ARC9_Ghosts.MAULUB_Lift", t = 1 / 60},
+            {s = "ARC9_Ghosts.FP6_Lift", t = 1 / 60},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["ready"] = {
-        Source = "first_draw",
+        Source = "draw",
         Time = 1,
         EventTable = {
-            {s = "ARC9_Ghosts.MAULUB_Lift", t = 1 / 60},
+            {s = "ARC9_Ghosts.FP6_Lift", t = 1 / 60},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.1,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.7,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["holster"] = {
         Source = "holster",
         Time = 1,
         EventTable = {
-            {s = "ARC9_Ghosts.MAULUB_Lift", t = 1 / 60},
+            {s = "", t = 1 / 60},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.6,
+                lhik = 0,
+                rhik = 0
+            },
         },
     },
     ["fire"] = {
@@ -389,78 +476,176 @@ SWEP.Animations = {
             "pump",
         },
         Time = 0.43,
+        EventTable = {
+            {s = "ARC9_Ghosts.FP6_Chamber", t = 0.1},
+        },
     },
     ["cycle_iron"] = {
         Source = {
             "pump_ads",
         },
         Time = 0.43,
+        EventTable = {
+            {s = "ARC9_Ghosts.FP6_Chamber", t = 0.1},
+        },
     },
     ["reload"] = {
         Source = "reload",
-        Time = 3.76,
+        Time = 125 / 30,
         EventTable = {
-            {s = "ARC9_Ghosts.MAULUB_Lift", t = 1 / 60},
-            {s = "ARC9_Ghosts.MAULUB_Out", t = 0.75},
-            {s = "ARC9_Ghosts.MAULUB_In", t = 2},
-            {s = "ARC9_Ghosts.MAULUB_Hit", t = 2.5},
-            {s = "ARC9_Ghosts.MAULUB_End", t = 3.1},
-        }
+            {s = "ARC9_Ghosts.FP6_Lift", t = 1 / 60},
+            {s = "ARC9_Ghosts.FP6_In", t = 20 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 35 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 50 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 65 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 80 / 30},
+            {s = "ARC9_Ghosts.FP6_Chamber", t = 90 / 30},
+            {s = "ARC9_Ghosts.FP6_End", t = 110 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0.0, lhik = 1, rhik = 0
+            },
+            {
+                t = 5 / 110, lhik = 1, rhik = 0
+            },
+            {
+                t = 85 / 110, lhik = 1, rhik = 0
+            },
+            {
+                t = 90 / 110, lhik = 1, rhik = 0
+            },
+        },
     },
     ["reload_1"] = {
         Source = "reload_1",
-        Time = 3.76,
+        Time = 64 / 30,
         EventTable = {
-            {s = "ARC9_Ghosts.MAULUB_Lift", t = 1 / 60},
-            {s = "ARC9_Ghosts.MAULUB_Out", t = 0.75},
-            {s = "ARC9_Ghosts.MAULUB_In", t = 2},
-            {s = "ARC9_Ghosts.MAULUB_Hit", t = 2.5},
-            {s = "ARC9_Ghosts.MAULUB_End", t = 3.1},
-        }
+            {s = "ARC9_Ghosts.FP6_Lift", t = 1 / 60},
+            {s = "ARC9_Ghosts.FP6_In", t = 20 / 30},
+            {s = "ARC9_Ghosts.FP6_Chamber", t = 30 / 30},
+            {s = "ARC9_Ghosts.FP6_End", t = 50 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0.0, lhik = 1, rhik = 0
+            },
+            {
+                t = 5 / 64, lhik = 0, rhik = 0
+            },
+            {
+                t = 30 / 64, lhik = 0, rhik = 0
+            },
+            {
+                t = 50 / 64, lhik = 1, rhik = 0
+            },
+        },
     },
     ["reload_2"] = {
         Source = "reload_2",
-        Time = 3.76,
+        Time = 79 / 30,
         EventTable = {
-            {s = "ARC9_Ghosts.MAULUB_Lift", t = 1 / 60},
-            {s = "ARC9_Ghosts.MAULUB_Out", t = 0.75},
-            {s = "ARC9_Ghosts.MAULUB_In", t = 2},
-            {s = "ARC9_Ghosts.MAULUB_Hit", t = 2.5},
-            {s = "ARC9_Ghosts.MAULUB_End", t = 3.1},
-        }
+            {s = "ARC9_Ghosts.FP6_Lift", t = 1 / 60},
+            {s = "ARC9_Ghosts.FP6_In", t = 20 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 35 / 30},
+            {s = "ARC9_Ghosts.FP6_Chamber", t = 45 / 30},
+            {s = "ARC9_Ghosts.FP6_End", t = 65 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0.0, lhik = 1, rhik = 0
+            },
+            {
+                t = 5 / 79, lhik = 0, rhik = 0
+            },
+            {
+                t = 45 / 79, lhik = 0, rhik = 0
+            },
+            {
+                t = 65 / 79, lhik = 1, rhik = 0
+            },
+        },
     },
     ["reload_3"] = {
         Source = "reload_3",
-        Time = 3.76,
+        Time = 94 / 30,
         EventTable = {
-            {s = "ARC9_Ghosts.MAULUB_Lift", t = 1 / 60},
-            {s = "ARC9_Ghosts.MAULUB_Out", t = 0.75},
-            {s = "ARC9_Ghosts.MAULUB_In", t = 2},
-            {s = "ARC9_Ghosts.MAULUB_Hit", t = 2.5},
-            {s = "ARC9_Ghosts.MAULUB_End", t = 3.1},
-        }
+            {s = "ARC9_Ghosts.FP6_Lift", t = 1 / 60},
+            {s = "ARC9_Ghosts.FP6_In", t = 20 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 35 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 50 / 30},
+            {s = "ARC9_Ghosts.FP6_Chamber", t = 60 / 30},
+            {s = "ARC9_Ghosts.FP6_End", t = 80 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0.0, lhik = 1, rhik = 0
+            },
+            {
+                t = 5 / 94, lhik = 0, rhik = 0
+            },
+            {
+                t = 60 / 94, lhik = 0, rhik = 0
+            },
+            {
+                t = 80 / 94, lhik = 1, rhik = 0
+            },
+        },
     },
     ["reload_4"] = {
         Source = "reload_4",
-        Time = 3.76,
+        Time = 110 / 30,
         EventTable = {
-            {s = "ARC9_Ghosts.MAULUB_Lift", t = 1 / 60},
-            {s = "ARC9_Ghosts.MAULUB_Out", t = 0.75},
-            {s = "ARC9_Ghosts.MAULUB_In", t = 2},
-            {s = "ARC9_Ghosts.MAULUB_Hit", t = 2.5},
-            {s = "ARC9_Ghosts.MAULUB_End", t = 3.1},
-        }
+            {s = "ARC9_Ghosts.FP6_Lift", t = 1 / 60},
+            {s = "ARC9_Ghosts.FP6_In", t = 20 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 35 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 50 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 65 / 30},
+            {s = "ARC9_Ghosts.FP6_Chamber", t = 75 / 30},
+            {s = "ARC9_Ghosts.FP6_End", t = 95 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0.0, lhik = 1, rhik = 0
+            },
+            {
+                t = 5 / 110, lhik = 0, rhik = 0
+            },
+            {
+                t = 75 / 110, lhik = 0, rhik = 0
+            },
+            {
+                t = 95 / 110, lhik = 1, rhik = 0
+            },
+        },
     },
-    ["reload_5"] = {
+    ["reload_empty"] = {
         Source = "reload_5",
-        Time = 3.76,
+        Time = 125 / 30,
         EventTable = {
-            {s = "ARC9_Ghosts.MAULUB_Lift", t = 1 / 60},
-            {s = "ARC9_Ghosts.MAULUB_Out", t = 0.75},
-            {s = "ARC9_Ghosts.MAULUB_In", t = 2},
-            {s = "ARC9_Ghosts.MAULUB_Hit", t = 2.5},
-            {s = "ARC9_Ghosts.MAULUB_End", t = 3.1},
-        }
+            {s = "ARC9_Ghosts.FP6_Lift", t = 1 / 60},
+            {s = "ARC9_Ghosts.FP6_In", t = 20 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 35 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 50 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 65 / 30},
+            {s = "ARC9_Ghosts.FP6_In", t = 80 / 30},
+            {s = "ARC9_Ghosts.FP6_Chamber", t = 90 / 30},
+            {s = "ARC9_Ghosts.FP6_End", t = 110 / 30},
+        },
+        IKTimeLine = {
+            {
+                t = 0.0, lhik = 1, rhik = 0
+            },
+            {
+                t = 5 / 125, lhik = 0, rhik = 0
+            },
+            {
+                t = 90 / 125, lhik = 0, rhik = 0
+            },
+            {
+                t = 110 / 125, lhik = 1, rhik = 0
+            },
+        },
     },
     ["enter_sprint"] = {
         Source = "sprint_in",

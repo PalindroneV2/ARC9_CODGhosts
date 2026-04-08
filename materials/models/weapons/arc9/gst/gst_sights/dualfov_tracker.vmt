@@ -15,4 +15,5 @@ VertexlitGeneric
 	$envmaptint "[ .01 .01 .01 ]"
 
 	"$nocull" "1"
+    "$translucent"          "1"
 }

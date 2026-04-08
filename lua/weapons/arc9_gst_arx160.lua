@@ -272,6 +272,13 @@ SWEP.AttachmentElements = {
             {3,2},
         },
     },
+    ["cod_extrairons_rear"] = {
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(-1.5, 0, 2.35),
+            },
+        },
+    },
 }
 
 SWEP.IronSightsHook = function(self)
@@ -295,6 +302,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     if attached["cod_optic"] or attached["cod_rail_riser"] then
         vm:SetBodygroup(1,1)
+    end
+    if attached["cod_extrairons_rear"] then
+        vm:SetBodygroup(1,2)
     end
 
     local camo = 0

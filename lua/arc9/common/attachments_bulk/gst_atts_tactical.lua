@@ -49,18 +49,28 @@ ATT.Category = {"cod_tactical"}
 
 ATT.Model = "models/weapons/arc9/gst_atts/gst_att_arxlight.mdl"
 ATT.Scale = 1
--- ATT.ModelOffset = Vector(-0.25,0,-0.225)
+ATT.ModelOffset = Vector(0,0,0.275)
+ATT.ModelAngleOffset = Angle(0,0,180)
 ATT.ActivateElements = {"gst_arx_light"}
 
-ATT.Flashlight = true
-ATT.FlashlightColor = Color(255, 255, 255)
-ATT.FlashlightMaterial = Material("")
-ATT.FlashlightDistance = 1024
-ATT.FlashlightFOV = 50
-ATT.FlashlightAttachment = 1
-
-ATT.SpreadMultHipFire = 0.95
---ATT.SpreadMultMove = 0.95
+ATT.ToggleOnF = true
+ATT.ToggleStats = {
+    {
+        PrintName = "Light Off",
+        Flashlight = false,
+        SpreadMultHipFire = 1,
+    },
+    {
+        PrintName = "Light On",
+        Flashlight = true,
+        FlashlightColor = Color(255, 255, 255),
+        FlashlightMaterial = Material(""),
+        FlashlightDistance = 1024,
+        FlashlightFOV = 50,
+        FlashlightAttachment = 1,
+        SpreadMultHipFire = 0.95,
+    },
+}
 
 ARC9.LoadAttachment(ATT, "gst_tac_arxlight")
 
@@ -82,9 +92,11 @@ ATT.Category = {"cod_tactical","cod_tactical_top"}
 
 ATT.Model = "models/weapons/arc9/gst_atts/gst_att_peq15.mdl"
 ATT.Scale = 1
--- ATT.ModelOffset = Vector(-0.25,0,-0.225)
+ATT.ModelOffset = Vector(0,0,0.275)
+ATT.ModelAngleOffset = Angle(0,0,180)
 ATT.ActivateElements = {"gst_peq15"}
 
+ATT.ToggleOnF = true
 ATT.ToggleStats = {
     {
         PrintName = "AN/PEQ-15 (On)",
