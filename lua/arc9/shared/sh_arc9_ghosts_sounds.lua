@@ -738,7 +738,7 @@ sound.Add( {
     }
 } )
 
--- MAUL
+-- FP6
 
 sound.Add( {
     name = "ARC9_Ghosts.FP6_Fire",
@@ -807,6 +807,83 @@ sound.Add( {
     level = 100,
     sound = {
         "^weapons/ARC9/gst_fp6/end.wav",
+    }
+} )
+
+-- MAUL
+
+sound.Add( {
+    name = "ARC9_Ghosts.MTS255_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_shotgun_shared/slst_05.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.MTS255_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_shotgun_shared/mech_05.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.MTS255_Lift",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_mts255/lift.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.MTS255_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_mts255/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.MTS255_Closed",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_mts255/closed.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.MTS255_Eject",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_mts255/eject.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.MTS255_Insert",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_mts255/insert.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.MTS255_End",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_mts255/end.wav",
     }
 } )
 

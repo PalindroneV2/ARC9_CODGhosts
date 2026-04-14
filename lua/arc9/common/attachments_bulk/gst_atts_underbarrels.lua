@@ -149,3 +149,38 @@ ATT.LHIK = true
 ATT.LHIK_Priority = 5
 
 ARC9.LoadAttachment(ATT, "gst_grip_angled")
+
+ATT = {}
+
+ATT.PrintName = "One-Handed"
+ATT.CompactName = [[One-Handed]]
+ATT.Icon = Material("entities/gst_generic.png", "mips smooth")
+ATT.Description = [[One-hand the weapon like pistol.
+Belongs to COD Ghosts.]]
+ATT.CustomPros = {}
+ATT.CustomCons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC9 - Ghosts Attachments"
+ATT.Free = false
+
+ATT.Category = {"cod_grips_onehanded"}
+
+ATT.Model = "models/weapons/arc9/gst_atts/c_gst_offhand.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(-17.5, 0, 5)
+
+ATT.RecoilMult = 1.15
+ATT.RecoilUpMult = 1.15
+ATT.RecoilSideMult = 1.15
+ATT.AimDownSightsTimeMult = 0.8
+ATT.SprintToFireTimeMult = 0.8
+ATT.VisualRecoilSightsMult = 1.5
+ATT.VisualRecoilMult = 1.5
+ATT.SpreadMultHipFire = 0.75
+ATT.SpreadMultShooting = 1.5
+ATT.LHIK = true
+ATT.LHIK_Priority = 5
+
+ATT.BoneMerge = true
+
+ARC9.LoadAttachment(ATT, "gst_grip_onehanded")
