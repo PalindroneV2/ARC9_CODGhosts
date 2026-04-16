@@ -40,8 +40,8 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 30
 SWEP.DamageMin = 20 -- damage done at maximum range
-SWEP.RangeMax = 8000
-SWEP.RangeMin = 2000
+SWEP.RangeMax = 80 * 39
+SWEP.RangeMin = 40 * 39
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -254,14 +254,14 @@ SWEP.AttachmentElements = {
     },
 }
 
-SWEP.IronSightsHook = function(self)
-    local attached = self:GetElements()
+-- SWEP.IronSightsHook = function(self)
+--     local attached = self:GetElements()
 
-    local newpos = ironsightpos
-    local newang = ironsightang
+--     local newpos = ironsightpos
+--     local newang = ironsightang
 
-    return {Pos = newpos, Ang = newang, Magnification = 1.1, ViewModelFOV = 50, CrosshairInSights = false,}
-end
+--     return {Pos = newpos, Ang = newang, Magnification = 1.1, ViewModelFOV = 50, CrosshairInSights = false,}
+-- end
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 

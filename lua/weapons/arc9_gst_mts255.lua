@@ -42,10 +42,10 @@ SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
 SWEP.CustomCamoScale = 2
 SWEP.CustomBlendFactor = 1
 
-SWEP.DamageMax = 39
-SWEP.DamageMin = 12 -- damage done at maximum range
-SWEP.RangeMax = 3000
-SWEP.RangeMin = 1500
+SWEP.DamageMax = 50
+SWEP.DamageMin = 15 -- damage done at maximum range
+SWEP.RangeMax = 50 * 39
+SWEP.RangeMin = 20 * 39
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -126,7 +126,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.11
 SWEP.SprintToFireTime = 0.14
 
-SWEP.RPM = 312
+SWEP.RPM = 285
 SWEP.Num = 8
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
@@ -456,7 +456,7 @@ SWEP.Animations = {
         Source = {
             "fire",
         },
-        Time = 9 / 30,
+        Time = 20 / 30,
         EventTable = {
             {s = "ARC9_Ghosts.MTS255_Mech", t = 1 / 60},
         },
@@ -465,7 +465,7 @@ SWEP.Animations = {
         Source = {
             "fire_ads",
         },
-        Time = 9 / 30,
+        Time = 20 / 30,
         EventTable = {
             {s = "ARC9_Ghosts.MTS255_Mech", t = 1 / 60},
         },

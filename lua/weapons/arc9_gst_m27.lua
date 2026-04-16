@@ -42,8 +42,8 @@ SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 30
 SWEP.DamageMin = 20 -- damage done at maximum range
-SWEP.RangeMax = 8000
-SWEP.RangeMin = 2000
+SWEP.RangeMax = 90 * 39
+SWEP.RangeMin = 45 * 39
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
@@ -401,14 +401,6 @@ SWEP.Attachments = {
         InstalledElements = {"grip_cover"},
     },
     {
-        PrintName = "Tactical Top",
-        DefaultCompactName = "TAC TOP",
-        Bone = "j_gun",
-        Pos = Vector(18.85, 0  , 3.1),
-        Ang = Angle(0, 0, 180),
-        Category = {"cod_tactical_top"},
-    },
-    {
         PrintName = "Tactical Underbarrel",
         DefaultCompactName = "TAC UB",
         Bone = "j_gun",
@@ -435,11 +427,11 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical Top",
-        DefaultCompactName = "TAC T",
+        DefaultCompactName = "TAC TOP",
         Bone = "j_gun",
-        Pos = Vector(12, 0, 1.8),
+        Pos = Vector(18.85, 0  , 3.1),
         Ang = Angle(0, 0, 180),
-        Category = {"cod_tactical"},
+        Category = {"cod_tactical_top"},
     },
     {
         PrintName = "Fire Control Group",
