@@ -121,6 +121,53 @@ ARC9.LoadAttachment(ATT, "gst_optic_acog")
 
 ATT = {}
 
+ATT.PrintName = "GM6 SCOPE"
+ATT.CompactName = [[GM6]]
+ATT.Icon = Material("entities/gst_generic.png", "mips smooth")
+ATT.Description = [[Long range combat scope for improved precision at longer ranges.
+Belongs to COD Ghosts.]]
+ATT.CustomPros = {
+    ["Zoom Level"] = "4x",
+}
+ATT.CustomCons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC9 - Ghosts Attachments"
+ATT.Free = false
+ATT.Folder = "SCOPE/GHOSTS"
+
+ATT.Category = {"cod_optic", "cod_optic_alt"}
+
+
+ATT.Model = "models/weapons/arc9/gst_atts/gst_att_scope_gm6.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, -0.2)
+-- ATT.ModelAngleOffset = Angle(0,90,0)
+
+ATT.Sights = {
+    {
+        Pos = Vector(-0.005, 12, -1.83),
+        Ang = Angle(0, 0, 0),
+        ViewModelFOV = 40,
+        Magnification = 1,
+        IgnoreExtra = true
+    },
+}
+
+ATT.RTScope = true
+ATT.RTScopeSubmatIndex = 3
+ATT.RTScopeFOV = 3
+ATT.RTScopeRes = 512
+ATT.RTScopeSurface = Material("models/weapons/arc9/mw3/mw3_optics/hamr_lens")
+ATT.RTScopeReticle = Material("hud/arc9_mwc/scopes/mwc_acog_realism.png", "mips smooth")
+ATT.RTScopeReticleScale = 1
+ATT.RTScopeShadowIntensity = 1.5
+ATT.RTScopeNoPP = false
+ATT.RTScopeColorable = true
+
+ARC9.LoadAttachment(ATT, "gst_optic_gm6")
+
+ATT = {}
+
 ATT.PrintName = "CNPCX DIGITAL III "
 ATT.CompactName = [[CNPCX]]
 ATT.Icon = Material("entities/gst_generic.png", "mips smooth")
@@ -197,7 +244,7 @@ ARC9.LoadAttachment(ATT, "gst_optic_targetfinder")
 
 ATT = {}
 
-ATT.PrintName = "CNPCX DIGITAL III Back Up Iron Sight"
+ATT.PrintName = "CNPCX DIGITAL III Back Up Iron Sight (Back)"
 ATT.CompactName = [[CNPCX BUS]]
 ATT.Icon = Material("entities/gst_generic.png", "mips smooth")
 ATT.Description = [[COD Ghosts Electronic Sight.
@@ -235,7 +282,7 @@ ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_gst_targetfinder")
 
 ATT = {}
 
-ATT.PrintName = "CNPCX DIGITAL III Back Up Iron Sight"
+ATT.PrintName = "CNPCX DIGITAL III Back Up Iron Sight (Front)"
 ATT.CompactName = [[CNPCX BUS]]
 ATT.Icon = Material("entities/gst_generic.png", "mips smooth")
 ATT.Description = [[COD Ghosts Electronic Sight.

@@ -522,6 +522,74 @@ sound.Add( {
     }
 } )
 
+-- GM6 Lynx
+
+sound.Add( {
+    name = "ARC9_Ghosts.GM6_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_GM6/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.GM6_Mech",
+    channel = CHAN_USER_BASE,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_GM6/mech.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_Ghosts.GM6_Chamber",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_GM6/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.GM6_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_GM6/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.GM6_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_GM6/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.GM6_Hit",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_GM6/hit.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_Ghosts.GM6_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/gst_GM6/lift.wav",
+    }
+} )
+
 -- R5 RGP
 
 sound.Add( {
