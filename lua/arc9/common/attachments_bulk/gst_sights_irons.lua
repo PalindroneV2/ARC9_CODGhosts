@@ -98,7 +98,7 @@ ATT.ModelOffset = Vector(0, 0, -0.2)
 
 ATT.Sights = {
     {
-        Pos = Vector(0.005, 6, -1.375),
+        Pos = Vector(0.005, 5, -1.375),
         Ang = Angle(0.1, 0.1, 0),
         ViewModelFOV = 50,
         Magnification = 1,
@@ -108,7 +108,7 @@ ATT.Sights = {
 
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 3
-ATT.RTScopeFOV = 8
+ATT.RTScopeFOV = 10
 ATT.RTScopeRes = 512
 ATT.RTScopeSurface = Material("models/weapons/arc9/mw3/mw3_optics/hamr_lens")
 ATT.RTScopeReticle = Material("hud/arc9_mwc/scopes/mwc_acog_realism.png", "mips smooth")
@@ -193,17 +193,17 @@ ATT.ModelBodygroups = "010"
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.005, 5, -1.823),
+        Pos = Vector(-0.005, 4, -1.823),
         Ang = Angle(0, 0, 0),
         ViewModelFOV = 50,
-        Magnification = 1.25,
+        Magnification = 1.1,
         IgnoreExtra = false
     },
 }
 
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 1
-ATT.RTScopeFOV = 30
+ATT.RTScopeFOV = 50
 ATT.RTScopeRes = 1024
 ATT.RTScopeReticle = Material("", "mips smooth")
 ATT.RTScopeReticleScale = 1.25
@@ -240,7 +240,7 @@ ATT.RTScopeFLIRCCCold = { -- Color correction drawn only on FLIR targets
     ["$pp_colour_mulb"] = 0
 }
 
-ARC9.LoadAttachment(ATT, "gst_optic_targetfinder")
+ARC9.LoadAttachment(ATT, "gst_optic_tracker")
 
 ATT = {}
 
@@ -278,7 +278,7 @@ ATT.Sights = {
     },
 }
 
-ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_gst_targetfinder")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_rear_gst_tracker")
 
 ATT = {}
 
@@ -306,4 +306,4 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, -0.35)
 ATT.ModelBodygroups = "001"
 
-ARC9.LoadAttachment(ATT, "cod_extra_iron_front_gst_targetfinder")
+ARC9.LoadAttachment(ATT, "cod_extra_iron_front_gst_tracker")

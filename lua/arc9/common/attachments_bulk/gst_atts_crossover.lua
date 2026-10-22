@@ -66,4 +66,4 @@ ATT.Attachments = {
     },
 }
 
-ARC9.LoadAttachment(ATT, "retro_ar15_upper_gst")
+ARC9.LoadAttachment(ATT, "retro_ar15_upper_gst_m27")
